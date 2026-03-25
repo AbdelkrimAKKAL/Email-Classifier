@@ -6,8 +6,8 @@ from app.main import app
 # Create a test client
 client = TestClient(app)
 
-# Only run integration tests if we have an API key configured (e.g. locally or in CI)
-HAS_API_KEY = os.getenv("HUGGINGFACE_API_KEY") is not None
+# Only run integration tests if we have an API key configured and it is not empty
+HAS_API_KEY = bool(os.getenv("HUGGINGFACE_API_KEY"))
 
 @pytest.mark.skipif(not HAS_API_KEY, reason="HUGGINGFACE_API_KEY is required for integration tests.")
 def test_classify_endpoint_live():
