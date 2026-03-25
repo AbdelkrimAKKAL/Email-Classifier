@@ -2,11 +2,9 @@
 Ensure these are set in your production environment (e.g., Render Dashboard):
 
 - `HUGGINGFACE_API_KEY`: Required for smart reply generation.
-- `GMAIL_CREDENTIALS_FILE`: Path to your `credentials.json`.
-- `GMAIL_TOKEN_FILE`: Path to your `token.json`.
 - `DATABASE_URL`: Set to a persistent disk or PostgreSQL URL if not using local SQLite.
 
-## 🧪 The Complete CI/CD Pipeline
+##  The Complete CI/CD Pipeline
 
 This project demonstrates a fully professional pipeline separating unit tests from integration tests.
 
